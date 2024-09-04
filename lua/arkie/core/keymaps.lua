@@ -7,11 +7,13 @@ keymap.set({ "i", "n" }, "<up>", "<Nop>", { desc = "Disable up arrow" })
 keymap.set({ "i", "n" }, "<down>", "<Nop>", { desc = "Disable down arrow" })
 
 -- Increment/Decrement
-keymap.set({ "v", "n" }, "<leader>=", "<C-a>", { desc = "Increment" })
-keymap.set({ "v", "n" }, "<leader>-", "<C-d>", { desc = "Decrement" })
+keymap.set("n", "<leader>=", "<C-a>", { desc = "Increment" })
+keymap.set("n", "<leader>=", "<C-a>", { desc = "Increment" })
+keymap.set("v", "<leader>-", "g<C-d>", { desc = "Decrement" })
+keymap.set("v", "<leader>-", "g<C-d>", { desc = "Decrement" })
 
 --NORMAL MODE
-keymap.set("n", "U", "<C-r>", { desc = "Redo", noremap = true })
+keymap.set("n", "U", "<C-r>", { noremap = true, desc = "Redo" })
 
 --Search results in center of screen
 keymap.set("n", "n", "nzz", { noremap = true })
@@ -19,13 +21,13 @@ keymap.set("n", "N", "Nzz", { noremap = true })
 
 --Inserting blank lines with enter
 keymap.set("n", "<enter>", "o<esc>")
-keymap.set("n", "<S-enter>", "O<esc>", { noremap = true })
+keymap.set("n", "<C-enter>", "O<esc>", { noremap = true })
 
 --Highlight all
-keymap.set("n", "<leader>a", "ggVG", { desc = "Select all" })
+keymap.set("n", "<leader>v", "ggVG", { desc = "Select all" })
 
 --Actions
-keymap.set("n", "<leader>`", "<cmd>!python3 %<CR>", { desc = "Run current file" })
+keymap.set("n", "<leader>`", "<cmd>w<CR><cmd>!python3 %<CR>", { desc = "Run current file" })
 
 --Appends
 keymap.set("n", "<leader>,", "A,<esc>J", { desc = "Append comma and join" })
