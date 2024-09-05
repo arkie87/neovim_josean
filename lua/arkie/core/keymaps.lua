@@ -19,6 +19,9 @@ keymap.set("n", "N", "Nzz", { noremap = true })
 keymap.set("n", "<enter>", "o<esc>")
 keymap.set("n", "<C-enter>", "O<esc>", { noremap = true })
 
+--Exiting terminal mode
+keymap.set("t", "<Esc>", "<C-\\><C-n>", { noremap = true })
+
 -- LEADER COMMANDS --
 
 -- Increment/Decrement
