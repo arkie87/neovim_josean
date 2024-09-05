@@ -22,6 +22,9 @@ keymap.set("n", "<C-enter>", "O<esc>", { noremap = true })
 --Exiting terminal mode
 keymap.set("t", "<Esc>", "<C-\\><C-n>", { noremap = true })
 
+--Shortcut to repeat macro
+keymap.set("n", "Q", "@q")
+
 -- LEADER COMMANDS --
 
 -- Increment/Decrement
